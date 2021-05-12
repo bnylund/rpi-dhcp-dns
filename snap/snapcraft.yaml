@@ -15,6 +15,9 @@ parts:
       - dirmngr
       - nodejs
       - npm
+    stage-packages:
+      - nodejs
+      - npm
 
 apps:
   rpi-dhcp:
