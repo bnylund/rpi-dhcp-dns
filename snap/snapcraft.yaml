@@ -22,3 +22,4 @@ apps:
     command: bin/node index.js
     daemon: simple
     restart-condition: always
+    plugs: [network-bind]
