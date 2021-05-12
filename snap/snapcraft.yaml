@@ -1,0 +1,21 @@
+name: rpi-dhcp
+version: git
+summary: DHCP Server for RPI
+description: |
+  DHCP Server for Raspberry PI
+
+base: core18
+confinement: devmode
+
+parts:
+  rpi-dhcp:
+    plugin: nodejs
+    source: .
+    build-packages:
+      - dirmngr
+      - nodejs
+      - npm
+
+apps:
+  rpi-dhcp:
+    command: npm start

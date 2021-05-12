@@ -1,0 +1,14 @@
+{
+  "name": "rpi-dhcp",
+  "version": "1.0.0",
+  "description": "DHCP Server for Raspberry Pi",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dhcp": "^0.2.20",
+    "dns2": "^2.0.0"
+  }
+}
