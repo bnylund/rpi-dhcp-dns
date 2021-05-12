@@ -13,12 +13,12 @@ parts:
     source: .
     build-packages:
       - dirmngr
-      - nodejs
-      - npm
     stage-packages:
       - nodejs
       - npm
 
 apps:
   rpi-dhcp:
-    command: npm start
+    command: bin/node index.js
+    daemon: simple
+    restart-condition: always
