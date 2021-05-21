@@ -6,6 +6,10 @@ description: |
 
 base: core18
 confinement: devmode
+architectures:
+  - build-on: [arm64, amd64]
+  - run-on: arm64
+#  - build-on: amd64
 
 parts:
   rpi-dhcp:
@@ -19,7 +23,7 @@ parts:
 
 apps:
   rpi-dhcp:
-    command: bin/node index.js
+    command: node $SNAP/index.js
     daemon: simple
     restart-condition: always
     plugs: [network-bind]
